@@ -14,7 +14,7 @@ Template Name: Commercial
   </ul>
   
   <div class="portfolio-copy">
-    <img src="<?php bloginfo('url'); ?>/images/video.jpg" alt="" />
+    <img src="<?php bloginfo('url'); ?>/wp-content/themes/a2f/images/video.jpg" alt="" />
     
     <h2 class="page-title">Commercial</h2>
     

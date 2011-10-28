@@ -14,12 +14,12 @@ Template Name: Speciality
   </ul>
   
   <div class="portfolio-copy">
-    <img src="<?php bloginfo('url'); ?>/wp-content/themes/a2f/images/video.jpg" alt="" />
+    <iframe src="http://player.vimeo.com/video/30292921?title=0&amp;byline=0&amp;portrait=0" width="674" height="379" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
     
     <h2 class="page-title">Speciality</h2>
     
-    <p>The wedding options we offer at A2f Pictures are designed to cater directly to your needs and wishes to make sure your day is captured exactly the way you want it. And with our approach, you will know exactly what you will be getting from us. Many wedding videographers give you pre-packaged options. Unfortunately they are often riddled with confusing phrasing and vague references to what you will actually be receiving. You may also be paying for options in these packages you don’t want or need.</p>
-    <p>At A2f Pictures we have developed a system where you build your own unique wedding package. We understand that this day is one of the most important days of your lives and that every wedding is different and distinctive, so we want to ensure that you are getting the exact video you will want to show family and friends for the rest of your lives.</p>
+    <p>We won’t limit potential clients, and ourselves, by just offering three categories of services that we are capable of shooting and creating. This page is devoted to anything and everything that involves all facets of video production work. If you just need something edited, we can do it. If you just need something shot, we can do it. If you aren’t sure of what you need, we can help you find it.</p>
+    <p>Our affordable rates put us in the best position to assist anyone in any category of film work. We won’t turn down anyone if they are in need of our assistance. We are so dedicated to our craft that we always want to be able to learn, grow, and create relationships through any project that needs our help. If you need something done that doesn’t fall under our other categories, please don’t hesitate to contact us.</p>
     
     <a href="<?php bloginfo('url') ?>/quote" class="get-your-quote">Get Your Quote</a>
   </div>

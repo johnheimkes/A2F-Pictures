@@ -32,9 +32,11 @@ a {
 	text-shadow: 0 1px 1.8px #333;
 }
 
-a:hover {
+a:hover,
+a.active-page {
 	color: #ca3329;
 }
+
 /*----------------------------------------------------------------------------
 =Header
 -----------------------------------------------------------------------------*/
@@ -198,6 +200,18 @@ h1 {
 	background-image: -webkit-gradient(linear, center top, center bottom, from(#7e201a), to(#ca3329));
 	background-image: -o-linear-gradient(top, #7e201a, #ca3329);
 	background-image: linear-gradient(top, #7e201a, #ca3329);
+}
+
+.quote-category-links {
+	display: block;
+	width: 826px;
+	height: 166px;
+	margin-bottom: 20px;
+	background: #fff;
+}
+
+.quote-category-links:hover img {
+	opacity: .75;
 }
 
 /*----------------------------------------------------------------------------

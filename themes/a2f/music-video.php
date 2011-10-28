@@ -14,12 +14,11 @@ Template Name: Music Video
   </ul>
   
   <div class="portfolio-copy">
-    <img src="<?php bloginfo('url'); ?>/wp-content/themes/a2f/images/video.jpg" alt="" />
+    <iframe src="http://player.vimeo.com/video/29858691?title=0&amp;byline=0&amp;portrait=0" width="674" height="379" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
     
     <h2 class="page-title">Music Video</h2>
     
-    <p>The wedding options we offer at A2f Pictures are designed to cater directly to your needs and wishes to make sure your day is captured exactly the way you want it. And with our approach, you will know exactly what you will be getting from us. Many wedding videographers give you pre-packaged options. Unfortunately they are often riddled with confusing phrasing and vague references to what you will actually be receiving. You may also be paying for options in these packages you don’t want or need.</p>
-    <p>At A2f Pictures we have developed a system where you build your own unique wedding package. We understand that this day is one of the most important days of your lives and that every wedding is different and distinctive, so we want to ensure that you are getting the exact video you will want to show family and friends for the rest of your lives.</p>
+    <p>As filmmakers, we understand the sheer importance of music and how when put with the perfect array of visuals, the emotional impact it can present to the audience is truly amazing. We don’t want to work for you on your project; we want to work with you so we can form a personal relationship with you and your art form in order to help us to create the best possible cinematic translation of your music to the screen.</p>
     
     <a href="<?php bloginfo('url') ?>/quote" class="get-your-quote">Get Your Quote</a>
   </div>

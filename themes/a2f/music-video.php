@@ -20,7 +20,7 @@ Template Name: Music Video
     
     <p>As filmmakers, we understand the sheer importance of music and how when put with the perfect array of visuals, the emotional impact it can present to the audience is truly amazing. We don’t want to work for you on your project; we want to work with you so we can form a personal relationship with you and your art form in order to help us to create the best possible cinematic translation of your music to the screen.</p>
     
-    <a href="<?php bloginfo('url') ?>/quote" class="get-your-quote">Get Your Quote</a>
+    <a href="<?php bloginfo('url') ?>/music-video-quote" class="get-your-quote">Get Your Quote</a>
   </div>
 </div>
 <?php get_footer(); ?>

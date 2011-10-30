@@ -268,12 +268,13 @@ h1 {
 }
 
 
-.gform_wrapper input[type="text"] {
+.ginput_container input[type="text"] {
 	width: 250px !important;
 	height: 20px;
 	text-indent: 5px;
 	border: 1px solid #999;
 	border-radius: 4px;
+	color: #333;
 	
 }
 

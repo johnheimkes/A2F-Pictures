@@ -5,6 +5,9 @@ Template Name: Contact
 ?>
 <?php get_header(); ?>
 <div id="content">
+  
+  <img src="<?php bloginfo('template_url') ?>/images/about-banner.jpg" alt="Mark, James and Trent working hard." />
+  
   <h2 class="page-title">Who We Are</h2>
   
   <p>A2f Pictures LLC was born in February of 2010 and is owned by Trent Hilborn, Mark Mazur, and James Rautmann. The trio currently runs the company out of St. Paul, Minnesota. A2f Pictures future lies in feature filmmaking, although currently specializes in professional and personal video production ranging from weddings, to music videos and a variety of commercial work.</p>

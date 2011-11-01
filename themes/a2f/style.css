@@ -329,3 +329,9 @@ input#input_1_2.medium {
 	float: left;
 	padding: 0 13px;
 }
+
+address {
+  	font-style: normal;
+  	line-height: 1.3;
+  	padding: 0 0 15px;
+}

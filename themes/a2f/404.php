@@ -10,5 +10,4 @@
     </div>
   </div>
 </div>
-<? get_sidebar(); ?>
 <? get_footer(); ?>

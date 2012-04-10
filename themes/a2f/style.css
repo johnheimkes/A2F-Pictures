@@ -33,7 +33,9 @@ a {
 }
 
 a:hover,
-a.active-page {
+a.active-page,
+li.current-menu-item a,
+li a:hover {
 	color: #ca3329;
 }
 
@@ -60,7 +62,7 @@ h1 {
 	background: url(images/logo.png) top left no-repeat;
 }
 
-.nav {
+#menu-header-main {
 	width: 486px;
 	float: left;
 	list-style: none;
@@ -74,7 +76,7 @@ h1 {
 	padding: 0 38px;
 }
 
-.nav-link {
+.nav-item a {
 	font-size: 14px;
 	text-decoration: none;
 	color: #2b2b2b;

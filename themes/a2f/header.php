@@ -14,10 +14,12 @@
     <div id="wrapper">
       <div id="header">
         <h1><a href="<?php bloginfo('url') ?>" class="header-logo">A2F Pictures</a></h1>
-        <ul class="nav">
+		
+		<?php wp_nav_menu( array('menu' => 'Header-Main' )); ?>
+        <!-- <ul class="nav">
           <li class="nav-item"><a href="<?php bloginfo('url') ?>" class="nav-link <?php if ( is_home() ) { echo 'active-page'; } ?>">Home</a></li>
           <li class="nav-item"><a href="<?php bloginfo('url') ?>/portfolio" class="nav-link <?php if ( is_page(array('portfolio', 'wedding', 'commercial', 'music-video', 'speciality')) ) { echo 'active-page'; } ?>">Portfolio</a></li>
           <li class="nav-item"><a href="<?php bloginfo('url') ?>/quote" class="nav-link <?php if ( is_page(array('quote', 'wedding-quote', 'speciality-quote', 'music-video-quote', 'commercial-quote')) ) { echo 'active-page'; } ?>">Quote</a></li>
           <li class="nav-item"><a href="<?php bloginfo('url') ?>/contact" class="nav-link <?php if ( is_page('contact') ) { echo 'active-page'; } ?>">Contact</a></li>
-        </ul>
+        </ul> -->
       </div>

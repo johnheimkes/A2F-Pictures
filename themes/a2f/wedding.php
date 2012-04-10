@@ -7,9 +7,9 @@ Template Name: Wedding
 <div id="content">
   
   <ul class="subnav">
-    <li class="subnav-item"><a class="subnav-link active-page" href="<?php bloginfo('url') ?>/portfolio/wedding">Wedding</a></li>
+    <li class="subnav-item"><a class="subnav-link" href="<?php bloginfo('url') ?>/portfolio/wedding">Wedding</a></li>
     <li class="subnav-item"><a class="subnav-link" href="<?php bloginfo('url') ?>/portfolio/commercial">Commercial</a></li>
-    <li class="subnav-item"><a class="subnav-link" href="<?php bloginfo('url') ?>/portfolio/music-video">Music Video</a></li>
+    <li class="subnav-item"><a class="subnav-link" href="<?php bloginfo('url') ?>/portfolio/promotional">Promotional</a></li>
     <li class="subnav-item"><a class="subnav-link" href="<?php bloginfo('url') ?>/portfolio/speciality">Speciality</a></li>
   </ul>
   

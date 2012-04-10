@@ -8,13 +8,13 @@ Template Name: Commercial
   
   <ul class="subnav">
     <li class="subnav-item"><a class="subnav-link" href="<?php bloginfo('url') ?>/portfolio/wedding">Wedding</a></li>
-    <li class="subnav-item"><a class="subnav-link active-page" href="<?php bloginfo('url') ?>/portfolio/commercial">Commercial</a></li>
-    <li class="subnav-item"><a class="subnav-link" href="<?php bloginfo('url') ?>/portfolio/music-video">Music Video</a></li>
+    <li class="subnav-item"><a class="subnav-link" href="<?php bloginfo('url') ?>/portfolio/commercial">Commercial</a></li>
+    <li class="subnav-item"><a class="subnav-link" href="<?php bloginfo('url') ?>/portfolio/promotional">Promotional</a></li>
     <li class="subnav-item"><a class="subnav-link" href="<?php bloginfo('url') ?>/portfolio/speciality">Speciality</a></li>
   </ul>
   
   <div class="portfolio-copy">
-    <iframe src="http://player.vimeo.com/video/29744402?title=0&amp;byline=0&amp;portrait=0" width="674" height="379" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
+    <iframe src="http://player.vimeo.com/video/38677558?title=0&amp;byline=0&amp;portrait=0" width="674" height="379" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
     
     <h2 class="page-title">Commercial</h2>
     

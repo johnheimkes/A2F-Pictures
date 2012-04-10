@@ -325,13 +325,13 @@ input#input_1_2.medium {
 }
 .foot-nav {
 	list-style: none;
-	width: 203px;
+	width: 240px;
 	margin: 0 auto;
 }
 
 .foot-nav-link {
 	float: left;
-	padding: 0 13px;
+	padding: 0 8px;
 }
 
 address {

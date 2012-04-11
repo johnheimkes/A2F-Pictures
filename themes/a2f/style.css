@@ -102,8 +102,8 @@ h1 {
 =Sub Nav
 -----------------------------------------------------------------------------*/
 #sidebar {
-width: 100px;
-float: left;
+	width: 100px;
+	float: left;
 }
 
 .subnav-item {
@@ -173,7 +173,7 @@ float: left;
 	margin-right: 0;
 }
 
-.portfolio-copy {
+.main-column {
 	width: 673px;
 	float: left;
 	margin-left: 70px;
@@ -188,7 +188,7 @@ float: left;
 	font-weight: normal;
 }
 
-.portfolio-copy p {
+.main-column p {
 	margin-bottom: 10px;
 	line-height: 1.5;
 	font-size: 12px;

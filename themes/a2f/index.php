@@ -1,5 +1,6 @@
 <? get_header(); ?>
 <div id="content">
+	<?php get_sidebar(); ?>
   <? if (have_posts()) : ?>
     <? while (have_posts()) : the_post(); ?>
       <div id="post-<? the_id(); ?>" class="article">
@@ -21,5 +22,4 @@
       </div>
   <? endif;?>
 </div>
-<? get_sidebar(); ?>
 <? get_footer(); ?>

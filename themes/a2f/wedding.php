@@ -5,15 +5,9 @@ Template Name: Wedding
 ?>
 <?php get_header(); ?>
 <div id="content">
+	<?php get_sidebar(); ?>
   
-  <ul class="subnav">
-    <li class="subnav-item"><a class="subnav-link" href="<?php bloginfo('url') ?>/portfolio/wedding">Wedding</a></li>
-    <li class="subnav-item"><a class="subnav-link" href="<?php bloginfo('url') ?>/portfolio/commercial">Commercial</a></li>
-    <li class="subnav-item"><a class="subnav-link" href="<?php bloginfo('url') ?>/portfolio/promotional">Promotional</a></li>
-    <li class="subnav-item"><a class="subnav-link" href="<?php bloginfo('url') ?>/portfolio/speciality">Speciality</a></li>
-  </ul>
-  
-  <div class="portfolio-copy">
+  <div class="main-column">
     <iframe src="http://player.vimeo.com/video/29930142?title=0&amp;byline=0&amp;portrait=0" width="674" height="379" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
     
     <h2 class="page-title">Weddings</h2>

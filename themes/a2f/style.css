@@ -86,19 +86,26 @@ h1 {
 -----------------------------------------------------------------------------*/
 .client-list {
 	list-style: none;
+	margin-bottom: 10px;
 }
 
 .client.item {
-	display: inline-block;
+/*	display:inline-block;*/
 	vertical-align: top;
 	width: 250px;
-	padding: 0 0 20px 20px;
-	border-left: 1px solid #ccc;
-	margin-left: 20px;
 }
 
-.client-item:hover
+.client.item a {
+	display: block;
+	padding: 10px 0 10px 20px;
+	border-left: 1px solid #ccc;
+}
 
+.client.item a:hover {
+	background-color: rgb(200, 200, 200);
+	background-color: rgba(200, 200, 200, .5);
+	color: #2B2B2B;
+}
 
 /*----------------------------------------------------------------------------
  =Main Nav
@@ -211,7 +218,8 @@ h1 {
 	position: relative;
 }
 
-.page-title {
+.page-title,
+.post-title {
 	margin: 0 0 20px;
 	font-size: 18px;
 	color: #2b2b2b;
@@ -329,6 +337,13 @@ input#input_1_2.medium {
 	border-radius: 4px;
 	line-height: 1.3;
 	color: #333;
+}
+
+.post blockquote p {
+	font-style: italic;
+	font-size: 14px;
+	padding: 20px 20px 20px 30px;
+	background-color: rgba(200, 200, 200, .5);
 }
 
 /*----------------------------------------------------------------------------

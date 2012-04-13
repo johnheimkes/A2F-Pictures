@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Wedding
+Template Name: Specialty
 */
 ?>
 <?php get_header(); ?>
@@ -13,7 +13,7 @@ Template Name: Wedding
 		<?php the_content(); ?>
     <?php endwhile; endif; ?>
     
-    <a href="<?php bloginfo('url') ?>/quote/wedding-quote" class="get-your-quote">Get Your Quote</a>
+    <a href="<?php bloginfo('url') ?>/quote/speciality-quote" class="get-your-quote">Get Your Quote</a>
   </div>
 </div>
 <?php get_footer(); ?>

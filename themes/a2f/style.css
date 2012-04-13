@@ -82,6 +82,25 @@ h1 {
 }
 
 /*----------------------------------------------------------------------------
+=Clients Page
+-----------------------------------------------------------------------------*/
+.client-list {
+	list-style: none;
+}
+
+.client.item {
+	display: inline-block;
+	vertical-align: top;
+	width: 250px;
+	padding: 0 0 20px 20px;
+	border-left: 1px solid #ccc;
+	margin-left: 20px;
+}
+
+.client-item:hover
+
+
+/*----------------------------------------------------------------------------
  =Main Nav
 -----------------------------------------------------------------------------*/
 #menu-header-main {
@@ -114,6 +133,10 @@ h1 {
 
 .subnav-item {
 	margin-bottom: 15px;
+}
+
+.spacer {
+	margin-bottom: 30px;
 }
 
 .single-recent_works #menu-item-101 a {

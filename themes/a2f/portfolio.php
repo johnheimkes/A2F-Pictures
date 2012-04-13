@@ -9,7 +9,10 @@ Template Name: Portfolio
   <?php get_sidebar(); ?>
   
   <div class="main-column">
-    <iframe src="http://player.vimeo.com/video/31379873?color=f0000c" width="674" height="379" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
+    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+		<h2 class="page-title"><?php the_title(); ?></h2>
+		<?php the_content(); ?>
+    <?php endwhile; endif; ?>
   </div>
 </div>
 <?php get_footer(); ?>

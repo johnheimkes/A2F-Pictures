@@ -40,10 +40,44 @@ function create_recent_works() {
     );
 }
 
+add_action( 'init', 'create_clients' );
+function create_clients() {
+    register_post_type( 'clients',
+        array(
+            'labels' => array(
+                'name' => __( 'Clients' ),
+                'singular_name' => __( 'Client' ),
+                'add_new' => __( 'Add New' ),
+                'add_new_item' => __( 'Add New Client' ),
+                'edit' => __( 'Edit' ),
+                'edit_item' => __( 'Edit Client' ),
+                'new_item' => __( 'New Client' ),
+            ),
+            'public' => true,
+            'supports' => array(
+                    'title',
+                    'editor',
+                    'thumbnail',
+                    'revisions'
+                ),
+            'has_archive' => false,
+            'rewrite' => array('slug' => 'clients')
+        )
+    );
+}
+
+
+
 function recent_works_short( ){
     return get_template_part_without_echo( 'loops/loop', 'recent-work' );
 }
 add_shortcode( 'recent-works', 'recent_works_short' );
+
+function clients_short( ){
+    return get_template_part_without_echo( 'loops/loop', 'clients' );
+}
+add_shortcode( 'clients-list', 'clients_short' );
+
 
 function get_template_part_without_echo($slug, $name) {
     ob_start();

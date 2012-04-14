@@ -339,11 +339,36 @@ input#input_1_2.medium {
 	color: #333;
 }
 
-.post blockquote p {
+.post blockquote {
 	font-style: italic;
-	font-size: 14px;
 	padding: 20px 20px 20px 30px;
 	background-color: rgba(200, 200, 200, .5);
+}
+
+.post blockquote p {
+	font-size: 14px;
+}
+
+.testimonial {
+	width: 48%;
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 10px;
+}
+
+.testimonial blockquote {
+	padding: 20px;
+	text-shadow: none;
+}
+
+.testimonial blockquote p {
+	font-size: 12px;
+	padding: 0;
+}
+
+.testimonial a:hover blockquote {
+	background-color: rgba(200, 200, 200, 1);
+	color: #2B2B2B;
 }
 
 /*----------------------------------------------------------------------------

@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <div id="content">
-	<?php if (is_page(array('recent-work', 'clients'))) : ?>
+	<?php if (is_page(array('recent-work', 'clients', 'testimonials'))) : ?>
 		<?php get_sidebar(); ?>
 		
 		<div class="main-column">

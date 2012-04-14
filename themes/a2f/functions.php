@@ -66,6 +66,31 @@ function create_clients() {
     );
 }
 
+add_action( 'init', 'create_testimonials' );
+function create_testimonials() {
+    register_post_type( 'testimonials',
+        array(
+            'labels' => array(
+                'name' => __( 'Testimonials' ),
+                'singular_name' => __( 'Testimonial' ),
+                'add_new' => __( 'Add New' ),
+                'add_new_item' => __( 'Add New Testimonial' ),
+                'edit' => __( 'Edit' ),
+                'edit_item' => __( 'Edit Testimonial' ),
+                'new_item' => __( 'New Testimonial' ),
+            ),
+            'public' => true,
+            'supports' => array(
+                    'title',
+                    'editor',
+                    'thumbnail',
+                    'revisions'
+                ),
+            'has_archive' => false,
+            'rewrite' => array('slug' => 'testimonials')
+        )
+    );
+}
 
 
 function recent_works_short( ){
@@ -77,6 +102,11 @@ function clients_short( ){
     return get_template_part_without_echo( 'loops/loop', 'clients' );
 }
 add_shortcode( 'clients-list', 'clients_short' );
+
+function testimonials_short( ){
+    return get_template_part_without_echo( 'loops/loop', 'testimonials' );
+}
+add_shortcode( 'testimonials', 'testimonials_short' );
 
 
 function get_template_part_without_echo($slug, $name) {

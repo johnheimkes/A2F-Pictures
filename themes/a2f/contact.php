@@ -6,7 +6,9 @@ Template Name: Contact
 <?php get_header(); ?>
 <div id="content">
   
-  <img src="<?php bloginfo('template_url') ?>/images/about-banner.jpg" alt="Mark, James and Trent working hard." />
+  <div class="image-heading">
+  	<img src="<?php bloginfo('template_url'); ?>/images/contact-images/<?php echo rand(1, 6); ?>.jpg" alt="Mark, James and Trent working hard." />
+  </div>
   
   <h2 class="page-title">Who We Are</h2>
   

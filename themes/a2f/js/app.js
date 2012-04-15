@@ -14,4 +14,11 @@ jQuery(document).ready(function() {
         $('#nav li:eq(2) a').trigger('click'); 
         return false; 
     });
+	
+	// var totalCount = 6;
+	// 
+	// function ChangeIt() {
+	// 	var num = Math.ceil( Math.random() * totalCount );
+	// 	document.body.background = 'contact-images/'+num+'.jpg';
+	// }
 });

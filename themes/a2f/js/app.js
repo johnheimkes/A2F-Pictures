@@ -15,6 +15,12 @@ jQuery(document).ready(function() {
         return false; 
     });
 	
+	$('div.accordion-video').hide();
+	
+	$('#toggle-video').click( function() {
+	    $('div.accordion-video').toggle();
+	});
+	
 	// var totalCount = 6;
 	// 
 	// function ChangeIt() {

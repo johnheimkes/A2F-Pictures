@@ -284,6 +284,7 @@ h1 {
 .image-heading {
 	width: 826px;
 	height: 166px;
+	margin-bottom: 30px;
 }
 
 .about-bio {
@@ -352,6 +353,10 @@ input#input_1_2.medium {
 	font-size: 14px;
 }
 
+.client blockquote {
+	margin-bottom: 15px;
+}
+
 .testimonial {
 	width: 48%;
 	display: inline-block;
@@ -367,6 +372,11 @@ input#input_1_2.medium {
 .testimonial blockquote p {
 	font-size: 12px;
 	padding: 0;
+}
+
+.entrytext p a {
+	text-shadow: none;
+	font-size: 12px;
 }
 
 .testimonial a:hover blockquote {

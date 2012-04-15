@@ -15,16 +15,22 @@ jQuery(document).ready(function() {
         return false; 
     });
 	
-	$('div.accordion-video').hide();
+	$('#widget').hide();
 	
-	$('#toggle-video').click( function() {
-	    $('div.accordion-video').toggle();
-	});
-	
-	// var totalCount = 6;
-	// 
-	// function ChangeIt() {
-	// 	var num = Math.ceil( Math.random() * totalCount );
-	// 	document.body.background = 'contact-images/'+num+'.jpg';
-	// }
+	// $('#toggle-video').click( function() {
+	//     $('#accordion-video').toggle();
+	// });
 });
+
+function showme(id, linkid) {
+    var divid = document.getElementById(id);
+    var toggleLink = document.getElementById(linkid);
+    if (divid.style.display == 'block') {
+        toggleLink.innerHTML = 'More &raquo;';
+        divid.style.display = 'none';
+    }
+    else {
+        toggleLink.innerHTML = '&laquo; Less';
+        divid.style.display = 'block';
+    }
+}

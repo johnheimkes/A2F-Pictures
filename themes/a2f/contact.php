@@ -44,5 +44,10 @@ Template Name: Contact
     <span class="numbers">P. 920.627.2253</span><br />
     <span class="numbers">W. 310.571.5401</span><br />
   </div>
+  
+  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+	<?php the_content(); ?>
+  <?php endwhile; endif; ?>
+  
 </div>
 <?php get_footer(); ?>

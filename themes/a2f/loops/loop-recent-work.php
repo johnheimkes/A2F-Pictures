@@ -1,4 +1,4 @@
-<?php $args = array( 'post_type' => 'recent_works', 'posts_per_page' => -1, 'orderby' => 'date', 'order' => 'ASC') ?>
+<?php $args = array( 'post_type' => 'recent_works', 'posts_per_page' => -1, 'orderby' => 'date', 'order' => 'DESC') ?>
 <?php $my_recent_works_query = new WP_Query( $args ); 
 
 while ( $my_recent_works_query->have_posts() ) : $my_recent_works_query->the_post(); ?>

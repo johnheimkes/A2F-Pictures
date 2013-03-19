@@ -9,7 +9,13 @@
  * @version $Id$
  */
 ?>
-     </div>
+        </div>
+        <footer class="mast-footer">
+            <div class="footer">
+                
+            </div>
+        </footer>
+    </div>
 <?php wp_footer(); ?>
 </body>
 </html>

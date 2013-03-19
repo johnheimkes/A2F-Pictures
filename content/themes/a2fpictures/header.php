@@ -10,7 +10,7 @@
  */
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html <?php language_attributes(); ?>>
 <head>
 
     <title><?php bloginfo('name'); ?><?php wp_title(' - '); ?></title>
@@ -20,15 +20,16 @@
     <link rel="shortcut icon" type="image/ico" href="<?php echo A2F_THEME_PATH_URL; ?>assets/images/favicon.ico" />
     <link rel="apple-touch-icon" href="<?php echo A2F_THEME_PATH_URL; ?>assets/images/apple-touch-icon.png" />
 
-    <?php wp_head(); // Always have wp_head() just before the closing </head> ?>
+    <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-    <div>
-        <?php if (get_header_image()) : ?>
-        <img src="<?php header_image() ?>" alt="<?php bloginfo('name'); ?>" />
-        <?php else : ?>
-            <h1><?php bloginfo('name');?></h1>
-        <?php endif; ?>
-
-        <?php wp_nav_menu(array('theme_location' => 'primary')); ?>
-        <div><?php get_search_form(); ?></div>
+    <div class="site-wrapper">
+        <header class="mast-header">
+            <div class="header">
+                <h1 class="logo">
+                    <a href="<?php echo home_url(); ?>" class="logo-link">A2f Pictures</a>
+                </h1>
+            </div>
+        </header>
+        
+        <div class="content-wrapper">

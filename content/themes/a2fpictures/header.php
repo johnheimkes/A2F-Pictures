@@ -32,4 +32,5 @@
             </div>
         </header>
         
-        <div class="content-wrapper">
+        <div class="mast-content">
+            <div class="content">

@@ -159,17 +159,14 @@ or delete where appropriate.
 .aligncenter {
     margin: 0 auto;
     display: block;
-    clear: both;
 }
 
 .alignleft {
     float: left;
-    clear: left;
 }
 
 .alignright {
     float: right;
-    clear: right;
 }
 
 img.aligncenter,

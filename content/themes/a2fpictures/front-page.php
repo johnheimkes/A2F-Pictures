@@ -9,5 +9,22 @@
  * @version $Id$
  */
 get_header(); ?>
-<?php get_template_part( 'loops/loop' ); ?>
+
+<div class="home-grid">
+    <?php if ( have_posts() : ) while ( have_posts() : ) the_post(); ?>
+        <div <?php post_class('home-post'); ?>>
+            <div class="post-image">
+                <?php the_post_thumbnail(); ?>
+            </div>
+            <div class="post-info">
+                <h3 class="post-title"><?php the_title(); ?></h3>
+                <div class="post-stakeholders">
+                    <span class="post-client">Client Name</span>
+                    <span class="post-director">Director Name</span>
+                </div>
+            </div>
+        </div>
+    <?php endwhile; endif; ?>
+</div>
+
 <?php get_footer();

@@ -29,6 +29,14 @@
                 <h1 class="logo">
                     <a href="<?php echo home_url(); ?>" class="logo-link">A2f Pictures</a>
                 </h1>
+                
+                <?php
+                wp_nav_menu(array(
+                    'menu'              => 'Primary Nav',
+                    'container'         => 'nav',
+                    'container_class'   => 'header-nav',
+                ));
+                ?>
             </div>
         </header>
         

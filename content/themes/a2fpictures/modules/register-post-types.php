@@ -28,6 +28,7 @@ function a2f_register_post_types()
             'menu_icon'     => A2F_THEME_PATH_URL . 'assets/images/films.png',
             'supports' => array(
                 'title',
+                'editor',
                 'thumbnail',
                 'author',
             ),

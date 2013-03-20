@@ -6,7 +6,7 @@
  * @package A2f_Pictures_Theme
  * @subpackage Home
  * @author John Heimkes IV <john@markupisart.com>
- * @version $Id$
+ * @version 1.0
  */
 
 $video_post = new WP_Query(array(

@@ -11,3 +11,50 @@
     font-style: normal;
 }
 
+.col-12of12 {
+	width: 100%;
+}
+
+.col-11of12 {
+	width: 91.46%;
+}
+
+.col-10of12 {
+	width: 83%;
+}
+
+.col-9of12 {
+	width: 74.54%;
+}
+
+.col-8of12 {
+	width: 66.08%;
+}
+
+.col-7of12 {
+	width: 57.62%; 
+}
+
+.col-6of12 {
+	width: 49.16%; 
+}
+
+.col-5of12 {
+	width: 40.7%; 
+}
+
+.col-4of12 {
+	width: 32.24%; 
+}
+
+.col-3of12 {
+	width: 23.78%;
+}
+
+.col-2of12 {
+	width: 15.32%; 
+}
+
+.col-1of12 {
+	width: 6.86%; 
+}

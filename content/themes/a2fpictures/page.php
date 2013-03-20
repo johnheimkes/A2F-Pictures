@@ -6,9 +6,11 @@
  * @package A2f_Pictures_Theme
  * @subpackage Index
  * @author John Heimkes IV <john@markupisart.com>
- * @version $Id$
+ * @version 1.0
  */
-?>
-<?php get_header(); ?>
+
+get_header(); ?>
+
 <?php get_template_part( 'loops/page' ); ?>
+
 <?php get_footer(); ?>

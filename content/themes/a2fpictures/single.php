@@ -6,7 +6,7 @@
  * @package A2f_Pictures_Theme
  * @subpackage Single
  * @author John Heimkes IV <john@markupisart.com>
- * @version $Id$
+ * @version 1.0
  */
 ?>
 <?php get_header(); ?>

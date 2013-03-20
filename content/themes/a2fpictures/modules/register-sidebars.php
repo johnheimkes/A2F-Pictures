@@ -5,7 +5,7 @@
  * @package WordPress_Sandbox
  * @subpackage sidebars
  * @author John Heimkes IV <john@markupisart.com>
- * @version $Id$
+ * @version 1.0
  */
 
 register_sidebar(array(

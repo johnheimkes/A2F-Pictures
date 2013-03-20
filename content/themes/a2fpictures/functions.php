@@ -4,7 +4,7 @@
  *
  * @package Functions
  * @author John Heimkes IV <john@markupisart.com>
- * @version $Id$
+ * @version 1.0
  */
 
 add_action('after_setup_theme', array('A2F_Theme', 'after_setup_theme'));
@@ -170,39 +170,6 @@ class A2F_Theme
             'screen, projection'
         );
 
-        // Repeat with Media Query stylesheets
-        wp_register_style(
-            'a2f-screen-small',
-            A2F_THEME_PATH_URL . 'assets/styles/screen_small.css',
-            array('a2f-screen'),
-            A2F_THEME_VER,
-            'screen and (min-width: 480px)'
-        );
-
-        wp_register_style(
-            'a2f-screen-medium',
-            A2F_THEME_PATH_URL . 'assets/styles/screen_medium.css',
-            array('a2f-screen'),
-            A2F_THEME_VER,
-            'screen and (min-width: 768px)'
-        );
-
-        wp_register_style(
-            'a2f-screen-large',
-            A2F_THEME_PATH_URL . 'assets/styles/screen_large.css',
-            array('a2f-screen'),
-            A2F_THEME_VER,
-            'screen and (min-width: 992px)'
-        );
-
-        wp_register_style(
-            'a2f-screen-huge',
-            A2F_THEME_PATH_URL . 'assets/styles/screen_large.css',
-            array('a2f-screen'),
-            A2F_THEME_VER,
-            'screen and (min-width: 1382px)'
-        );
-
         // Conditional statements for IE stylesheets
         $wp_styles->add_data('a2f-ie9', 'conditional', 'lte IE 9');
         $wp_styles->add_data('a2f-ie8', 'conditional', 'lte IE 8');
@@ -210,10 +177,6 @@ class A2F_Theme
         // Queue the stylesheets. Note that because a2f-screen was registered
         // with a2f-wysiwyg as a dependency, it does not need to be enqueued here.
         wp_enqueue_style('a2f-wysiwyg');
-        wp_enqueue_style('a2f-screen-small');
-        wp_enqueue_style('a2f-screen-medium');
-        wp_enqueue_style('a2f-screen-large');
-        wp_enqueue_style('a2f-screen-huge');
         wp_enqueue_style('a2f-ie9');
         wp_enqueue_style('a2f-ie8');
 

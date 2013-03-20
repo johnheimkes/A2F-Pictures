@@ -5,7 +5,7 @@
  * @package WordPress_Sandbox
  * @subpackage Gallery
  * @author John Heimkes IV <john@markupisart.com>
- * @version $Id$
+ * @version 1.0
  */
 $size_class = sanitize_html_class($gallery_attrs->size);
 ?>

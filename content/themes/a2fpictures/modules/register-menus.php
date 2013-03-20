@@ -5,7 +5,7 @@
  * @package WordPress_Sandbox
  * @subpackage menus
  * @author John Heimkes IV <john@markupisart.com>
- * @version $Id$
+ * @version 1.0
  */
 
 register_nav_menus(array(

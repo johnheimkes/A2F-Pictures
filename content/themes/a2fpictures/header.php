@@ -26,8 +26,8 @@
     <div class="site-wrapper">
         <header class="mast-header">
             <div class="header">
-                <h1 class="logo">
-                    <a href="<?php echo home_url(); ?>" class="logo-link">A2f Pictures</a>
+                <h1>
+                    <a href="<?php echo home_url(); ?>" class="logo">A2f Pictures</a>
                 </h1>
                 
                 <?php

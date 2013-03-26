@@ -213,7 +213,7 @@ a:hover {
 
 .footer .mailto:after {
     content: '|';
-    padding-left: 6px;
+    padding: 0 3px 0 4px;
 }
 
 .bottom-bg {

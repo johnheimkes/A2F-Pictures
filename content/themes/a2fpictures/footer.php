@@ -20,7 +20,9 @@
                 </div>
                 
                 <div class="contact">
-                    <a href="mailto:&#105;&#110;&#102;&#111;&#064;&#097;&#050;&#102;&#112;&#105;&#099;&#116;&#117;&#114;&#101;&#115;&#046;&#099;&#111;&#109;" class="mailto">info@a2fpictures.com</a>
+                    <span class="mailto">
+                        <a href="mailto:&#105;&#110;&#102;&#111;&#064;&#097;&#050;&#102;&#112;&#105;&#099;&#116;&#117;&#114;&#101;&#115;&#046;&#099;&#111;&#109;">info@a2fpictures.com</a>
+                    </span>
                     <address>
                         653 Galtier Street, Ste. 204, Saint Paul, MN, 55103
                     </address>

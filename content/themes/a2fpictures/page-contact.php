@@ -15,9 +15,9 @@ get_header(); ?>
 
 <h2 class="page-title">Contact Us</h2>
 
-<div class="col-12of12">
+<div class="grid-col-12">
     <?php if ( get_field( 'contact_page_content' ) ) : ?>
-        <div class="grid-col-6">
+        <div class="grid-col-6 grid-col">
             <?php while ( has_sub_field( 'contact_page_content' ) ) : ?>
                 <p><?php the_sub_field( 'left_paragraph' ); ?></p>
             <?php endwhile; ?>
@@ -25,7 +25,7 @@ get_header(); ?>
     <?php endif; ?>
     
     <?php if ( get_field( 'contact_page_content' ) ) : ?>
-        <div class="grid-col-6">
+        <div class="grid-col-6 grid-col">
             <?php while ( has_sub_field( 'contact_page_content' ) ) : ?>
                 <p><?php the_sub_field( 'right_paragraph' ); ?></p>
             <?php endwhile; ?>
@@ -33,17 +33,17 @@ get_header(); ?>
     <?php endif; ?>
 </div>
 
-<div class="col-12of12 map">
-    <iframe width="930" height="375" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=A2f+Pictures+LLC,+Galtier+Street,+Saint+Paul,+MN&amp;aq=0&amp;oq=A2F+pictures&amp;sll=44.96123,-93.111427&amp;sspn=0.008776,0.009592&amp;t=m&amp;g=653+Galtier+Street,+Ste.+204,+Saint+Paul,+MN+55103&amp;ie=UTF8&amp;hq=A2f+Pictures+LLC,&amp;hnear=Galtier+St,+St+Paul,+Ramsey,+Minnesota&amp;cid=176982257702447068&amp;ll=44.96164,-93.111191&amp;spn=0.022775,0.079737&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=A2f+Pictures+LLC,+Galtier+Street,+Saint+Paul,+MN&amp;aq=0&amp;oq=A2F+pictures&amp;sll=44.96123,-93.111427&amp;sspn=0.008776,0.009592&amp;t=m&amp;g=653+Galtier+Street,+Ste.+204,+Saint+Paul,+MN+55103&amp;ie=UTF8&amp;hq=A2f+Pictures+LLC,&amp;hnear=Galtier+St,+St+Paul,+Ramsey,+Minnesota&amp;cid=176982257702447068&amp;ll=44.96164,-93.111191&amp;spn=0.022775,0.079737&amp;z=14&amp;iwloc=A" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+<div class="grid-col-12 map">
+    <iframe width="930" height="375" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?ie=UTF8&amp;cid=176982257702447068&amp;q=A2f+Pictures+LLC&amp;gl=US&amp;hl=en&amp;t=m&amp;ll=44.963523,-93.11147&amp;spn=0.005693,0.019934&amp;z=16&amp;iwloc=A&amp;output=embed"></iframe>
 </div>
 
 <div class="grid-col-12 office-contact">
     
     <?php if ( get_field( 'midwest_office' ) ) : ?>
-        <div class="grid-col-3">
+        <div class="grid-col-4 grid-col">
             <?php while ( has_sub_field( 'midwest_office' ) ) : ?>
-                <h3>Midwest Office</h3>
-                <p class="office-phone"><?php the_sub_field( 'midwest_office_phone' ); ?></p>
+                <h3 class="heading-3">Midwest Office</h3>
+                <p class="office-phone italic"><?php the_sub_field( 'midwest_office_phone' ); ?></p>
                 <address>
                     <?php the_sub_field( 'midwest_office_address' ); ?>
                 </address>
@@ -53,20 +53,20 @@ get_header(); ?>
     <?php endif; ?>
     
     <?php if ( get_field( 'east_coast_office' ) ) : ?>
-        <div class="grid-col-3">
+        <div class="grid-col-4 grid-col">
             <?php while ( has_sub_field( 'east_coast_office' ) ) : ?>
-                <h3>Midwest Office</h3>
-                <p class="office-phone"><?php the_sub_field( 'east_coast_office_phone' ); ?></p>
+                <h3 class="heading-3">Midwest Office</h3>
+                <p class="office-phone italic"><?php the_sub_field( 'east_coast_office_phone' ); ?></p>
                 <p><?php the_sub_field( 'east_coast_office_email' ); ?></p>
             <?php endwhile; ?>
         </div>
     <?php endif; ?>
     
     <?php if ( get_field( 'west_coast_office' ) ) : ?>
-        <div class="grid-col-3">
+        <div class="grid-col-4 grid-col">
             <?php while ( has_sub_field( 'west_coast_office' ) ) : ?>
-                <h3>Midwest Office</h3>
-                <p class="office-phone"><?php the_sub_field( 'west_coast_office_phone' ); ?></p>
+                <h3 class="heading-3">Midwest Office</h3>
+                <p class="office-phone italic"><?php the_sub_field( 'west_coast_office_phone' ); ?></p>
                 <p><?php the_sub_field( 'west_coast_office_email' ); ?></p>
             <?php endwhile; ?>
         </div>

@@ -60,6 +60,7 @@ class A2F_Theme
         
         // Add Image Sizes
         add_image_size('homepage-thumbnail', 459, 258, true);
+        add_image_size('more-by-thumbnail', 146, 86, true);
     }
 
     /**

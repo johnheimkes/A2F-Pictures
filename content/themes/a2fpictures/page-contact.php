@@ -13,7 +13,7 @@
 
 get_header(); ?>
 
-<h2 class="page-title">Contact Us</h2>
+<h2 class="title">Contact Us</h2>
 
 <div class="grid-col-12">
     <?php if ( get_field( 'contact_page_content' ) ) : ?>

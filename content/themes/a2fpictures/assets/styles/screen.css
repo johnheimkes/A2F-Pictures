@@ -125,11 +125,20 @@ a:hover {
     text-decoration: none;
 }
 
+.post-info {
+    display: none;
+}
+
+.home-post:hover .post-info,
+.related-post:hover .post-info {
+    display: block;
+}
+
 .content {
     margin-bottom: 50px;
 }
 
-.page-title {
+.title {
     font: normal 36px 'league_gothicregular';
     line-height: 1.4;
 }
@@ -162,7 +171,8 @@ em {
     position: relative;
 }
 
-.home-post:nth-child(2n+3) {
+.home-post:nth-child(2n+3),
+.related-post:nth-child(3n+4) {
     margin-left: 0;
 }
 
@@ -191,14 +201,6 @@ em {
     padding: 0 5px 0 10px;
 }
 
-.home-post .post-info {
-    display: none;
-}
-
-.home-post:hover .post-info {
-    display: block;
-}
-
 /* ---------------------------------------------------------------------
 = Contact
 ------------------------------------------------------------------------ */
@@ -221,6 +223,36 @@ em {
 .office-contact address {
     line-height: 1.2;
     margin: 3px 0 5px;
+}
+
+/* ---------------------------------------------------------------------
+= Single Project Page
+------------------------------------------------------------------------ */
+.video {
+    margin-bottom: 39px;
+}
+
+.related-posts {
+    overflow: hidden;
+}
+
+.related-post a {
+    display: block;
+    position: relative;
+}
+
+.related-post {
+    margin-bottom: 5px;
+}
+
+.related-post-title {
+    font-size: 12px;
+    padding: 2px 5px;
+}
+
+.single .client-name {
+    font-size: 18px;
+    padding-bottom: 10px;
 }
 
 /* ---------------------------------------------------------------------

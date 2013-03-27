@@ -10,5 +10,15 @@
  */
 ?>
 <?php get_header(); ?>
-<?php get_template_part( 'loops/loop', 'single' ); ?>
+
+<div class="grid-col-12">
+    
+    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+        <div class="grid-col-12 video">
+            <?php the_field('video_link'); ?>
+        </div>
+    <?php endwhile; endif; ?>
+    
+</div>
+
 <?php get_footer(); ?>

@@ -16,9 +16,11 @@
     <title><?php bloginfo('name'); ?><?php wp_title(' - '); ?></title>
     <link rel="pingback" href="<?php bloginfo('pingback_url') ?>" />
 
+    <!-- META DATA -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
     <!-- ICONS -->
     <link rel="shortcut icon" type="image/ico" href="<?php echo A2F_THEME_PATH_URL; ?>assets/images/favicon.ico" />
-    <link rel="apple-touch-icon" href="<?php echo A2F_THEME_PATH_URL; ?>assets/images/apple-touch-icon.png" />
 
     <?php wp_head(); ?>
 </head>

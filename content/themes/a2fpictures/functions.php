@@ -17,6 +17,8 @@ define('A2F_THEME_PATH', get_template_directory() . '/');
 define('A2F_THEME_VER', '2.1');
 define('A2F_TEXT_DOMAIN', basename(dirname(__FILE__)));
 
+if ( ! isset( $content_width ) ) $content_width = 940;
+
 /**
  * Theme init class
  *
@@ -39,7 +41,6 @@ class A2F_Theme
     public static function after_setup_theme()
     {
         self::_includes();
-        self::_widgets();
 
         /**
          * Theme Supports
@@ -51,7 +52,6 @@ class A2F_Theme
         /**
          * Actions and filters
          */
-        add_action('widgets_init', array('A2F_Theme', 'widget_init'));
         add_action('wp_enqueue_scripts', array('A2F_Theme', 'enqueue_scripts'));
         add_action('wp_enqueue_scripts', array('A2F_Theme', 'enqueue_styles'));
 
@@ -73,34 +73,7 @@ class A2F_Theme
          * Includes
          */
         include_once 'modules/register-post-types.php';
-        include_once 'modules/register-taxonomies.php';
         include_once 'modules/register-menus.php';
-        include_once 'modules/register-sidebars.php';
-        include_once 'modules/gallery.php';
-    }
-
-    /**
-     * Includes for widget class files
-     *
-     * @return void
-     */
-    private static function _widgets()
-    {
-        /**
-         * Widgets
-         */
-        include_once 'widgets/skeleton-widget.php';
-    }
-
-    /**
-     * Init Theme-specific Widgets
-     * see Widgets_API {@link http://goo.gl/B2H6y}
-     *
-     */
-    public static function widget_init()
-    {
-        // register all the widgets
-        register_widget('A2f_Skeleton_Widget');
     }
 
     /**
@@ -155,33 +128,9 @@ class A2F_Theme
             'screen, projection'
         );
 
-        // IE 9 Stylesheet
-        wp_register_style(
-            'a2f-ie9',
-            A2F_THEME_PATH_URL . 'assets/styles/ie9.css',
-            array('a2f-screen'),
-            A2F_THEME_VER,
-            'screen, projection'
-        );
-
-        // IE 8 Stylesheet
-        wp_register_style(
-            'a2f-ie8',
-            A2F_THEME_PATH_URL . 'assets/styles/ie8.css',
-            array('a2f-screen'),
-            A2F_THEME_VER,
-            'screen, projection'
-        );
-
-        // Conditional statements for IE stylesheets
-        $wp_styles->add_data('a2f-ie9', 'conditional', 'lte IE 9');
-        $wp_styles->add_data('a2f-ie8', 'conditional', 'lte IE 8');
-
         // Queue the stylesheets. Note that because a2f-screen was registered
         // with a2f-wysiwyg as a dependency, it does not need to be enqueued here.
         wp_enqueue_style('a2f-wysiwyg');
-        wp_enqueue_style('a2f-ie9');
-        wp_enqueue_style('a2f-ie8');
 
     }
 

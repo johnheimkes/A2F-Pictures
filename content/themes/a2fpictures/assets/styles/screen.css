@@ -256,6 +256,26 @@ em {
     padding-bottom: 10px;
 }
 
+.director-image img {
+    filter: url(filters.svg#grayscale); /* Firefox 3.5+ */
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(1); /* Google Chrome & Safari 6+ */
+}
+
+.director-image img:hover,
+.director-image img.active-bio {
+    filter: none;
+    -webkit-filter: grayscale(0);
+}
+
+.director-image img.inactive-bio {
+    opacity: .5;
+}
+
+.director-image img.inactive-bio:hover {
+    opacity: 1;
+}
+
 /* ---------------------------------------------------------------------
 = Footer
 ------------------------------------------------------------------------ */

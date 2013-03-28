@@ -42,12 +42,14 @@ get_header(); ?>
     <?php if ( get_field( 'midwest_office' ) ) : ?>
         <div class="grid-col-4 grid-col">
             <?php while ( has_sub_field( 'midwest_office' ) ) : ?>
-                <h3 class="heading-3">Midwest Office</h3>
+                <h3 class="heading-3">Midwest</h3>
                 <p class="office-phone italic"><?php the_sub_field( 'midwest_office_phone' ); ?></p>
                 <address>
                     <?php the_sub_field( 'midwest_office_address' ); ?>
                 </address>
-                <p><?php the_sub_field( 'midwest_office_email' ); ?></p>
+                <p>
+                    <a href="mailto:<?php the_sub_field( 'midwest_office_email' ); ?>"><?php the_sub_field( 'midwest_office_email' ); ?></a>
+                </p>
             <?php endwhile; ?>
         </div>
     <?php endif; ?>
@@ -55,9 +57,11 @@ get_header(); ?>
     <?php if ( get_field( 'east_coast_office' ) ) : ?>
         <div class="grid-col-4 grid-col">
             <?php while ( has_sub_field( 'east_coast_office' ) ) : ?>
-                <h3 class="heading-3">Midwest Office</h3>
+                <h3 class="heading-3">East Coast</h3>
                 <p class="office-phone italic"><?php the_sub_field( 'east_coast_office_phone' ); ?></p>
-                <p><?php the_sub_field( 'east_coast_office_email' ); ?></p>
+                <p>
+                    <a href="mailto:<?php the_sub_field( 'midwest_office_email' ); ?>"><?php the_sub_field( 'east_coast_office_email' ); ?></a>
+                </p>
             <?php endwhile; ?>
         </div>
     <?php endif; ?>
@@ -65,9 +69,11 @@ get_header(); ?>
     <?php if ( get_field( 'west_coast_office' ) ) : ?>
         <div class="grid-col-4 grid-col">
             <?php while ( has_sub_field( 'west_coast_office' ) ) : ?>
-                <h3 class="heading-3">Midwest Office</h3>
+                <h3 class="heading-3">West Coast</h3>
                 <p class="office-phone italic"><?php the_sub_field( 'west_coast_office_phone' ); ?></p>
-                <p><?php the_sub_field( 'west_coast_office_email' ); ?></p>
+                <p>
+                    <a href="mailto:<?php the_sub_field( 'midwest_office_email' ); ?>"><?php the_sub_field( 'west_coast_office_email' ); ?></a>
+                </p>
             <?php endwhile; ?>
         </div>
     <?php endif; ?>

@@ -117,6 +117,7 @@ a:hover {
     text-transform: uppercase;
     font: normal 36px 'league_gothicregular';
     color: #ffffff;
+    letter-spacing: 1px;
 }
 
 .current-menu-item > a,
@@ -157,6 +158,10 @@ strong {
 .em,
 em {
     font-style: italic;
+}
+
+.page-head {
+    margin-bottom: 39px;
 }
 
 /* ---------------------------------------------------------------------
@@ -226,12 +231,8 @@ em {
 }
 
 /* ---------------------------------------------------------------------
-= Single Project Page
+= Single Project Page and Directors
 ------------------------------------------------------------------------ */
-.video {
-    margin-bottom: 39px;
-}
-
 .related-posts {
     overflow: hidden;
 }
@@ -250,7 +251,7 @@ em {
     padding: 2px 5px;
 }
 
-.single .client-name {
+.client-name {
     font-size: 18px;
     padding-bottom: 10px;
 }

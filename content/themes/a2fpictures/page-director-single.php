@@ -15,6 +15,7 @@ $author_name = get_the_author_meta('display_name');
 
 get_header(); ?>
 
+<a name="scrollto"></a>
 <h2 class="title">Who We Are</h2>
 
 <?php get_template_part( 'views/bio', 'pics' ); ?>

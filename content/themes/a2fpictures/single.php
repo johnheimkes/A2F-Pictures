@@ -24,9 +24,13 @@ $author_name = get_the_author_meta('display_name');
             <div class="grid-col-6 grid-col">
                 <h2 class="title"><?php the_title(); ?></h2>
                 
-                <h3 class="client-name oblique">Directed By: <?php the_field( 'director_name' ); ?></h3>
+                <?php if ( get_field( 'director_name' ) ) : ?>
+                    <h3 class="client-name oblique">Directed By: <?php the_field( 'director_name' ); ?></h3>
+                <?php endif; ?>
                 
-                <h3 class="client-name oblique">Client: <?php the_field( 'client_name' ); ?></h3>
+                <?php if ( get_field( 'client_name' ) ) : ?>
+                    <h3 class="client-name oblique">Client: <?php the_field( 'client_name' ); ?></h3>
+                <?php endif; ?>
                 
                 <?php if ( get_field( 'misc_fields' ) ) : while ( has_sub_field( 'misc_fields' ) ) : ?>
                     <h3 class="client-name oblique"><?php the_sub_field( 'misc_field' ); ?></h3>

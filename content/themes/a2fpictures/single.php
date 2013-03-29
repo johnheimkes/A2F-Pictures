@@ -123,6 +123,34 @@ $author_name = get_the_author_meta('display_name');
                 </div>
             <?php } ?>
             
+            <?php if ( get_the_author_meta('display_name') == 'A2F Pictures') { ?>
+                <div class="grid-col-6 grid-col">
+                    <h3 class="title">Projects Directed By <?php the_author(); ?></h3>
+                    
+                    <?php
+                        $posts = get_field('more_projects_by_a2f', 'option');
+                
+                        if ( $posts ) :
+                    ?>
+                    <ul class="related-posts">
+                        <?php foreach ( $posts as $post ) : setup_postdata( $post ); ?>
+                            <li class="grid-col-4 grid-col related-post">
+                                <a href="<?php the_permalink(); ?>">
+                                    <div class="post-image">
+                                        <?php the_post_thumbnail('more-by-thumbnail'); ?>
+                                    </div>
+                                    <div class="post-info">
+                                        <h4 class="related-post-title"><?php the_title(); ?> &rarr;</h4>
+                                    </div>
+                                </a>
+                            </li>
+                        <?php endforeach; ?>
+                    </ul>
+                    <?php wp_reset_postdata(); endif; ?>
+                    
+                </div>
+            <?php } ?>
+            
         </div>
         
     <?php endwhile; endif; ?>

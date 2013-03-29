@@ -28,12 +28,6 @@
                 
                 <ul class="social-media-list">
                     <li class="social-media-item">
-                        <a href="http://www.youtube.com/user/A2fPicturesLLC" target="_blank">YouTube</a>
-                    </li>
-                    <li class="social-media-item">
-                        <a href="http://vimeo.com/channels/a2fpictures" target="_blank">Vimeo</a>
-                    </li>
-                    <li class="social-media-item">
                         <a href="http://twitter.com/#!/a2fpicture" target="_blank">Twitter</a>
                     </li>
                     <li class="social-media-item">

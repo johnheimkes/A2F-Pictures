@@ -27,11 +27,11 @@
                 </div>
                 
                 <ul class="social-media-list">
-                    <li class="social-media-item social-twitter">
-                        <a href="http://twitter.com/a2fpictures" target="_blank">Twitter</a>
-                    </li>
                     <li class="social-media-item social-facebook">
                         <a href="http://facebook.com/A2FPictures" target="_blank">Facebook</a>
+                    </li>
+                    <li class="social-media-item social-twitter">
+                        <a href="http://twitter.com/a2fpictures" target="_blank">Twitter</a>
                     </li>
                 </ul>
                 

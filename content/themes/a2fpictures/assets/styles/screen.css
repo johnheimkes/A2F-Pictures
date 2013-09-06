@@ -280,6 +280,7 @@ em {
 = Footer
 ------------------------------------------------------------------------ */
 .footer {
+    padding-bottom: 50px;
     text-align: center;
     line-height: 2.5;
 }

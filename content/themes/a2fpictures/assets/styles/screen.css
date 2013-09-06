@@ -286,6 +286,7 @@ em {
 }
 
 .social-media-list {
+    margin-top: 12px;
     overflow: hidden;
     display: inline-block;
 }

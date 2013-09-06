@@ -290,9 +290,19 @@ em {
 }
 
 .social-media-item {
+    width: 29px;
+    height: 29px;
     float: left;
     margin: 0 5px;
+    text-indent: -9999px;
 }
+
+.social-media-item > a { display: block; }
+.social-media-item:hover { opacity: .7; }
+.social-twitter { background-color: #000000; }
+.social-facebook { background-color: #ffffff; }
+.social-twitter a { background: url('../images/twitter.png') top left no-repeat; }
+.social-facebook a { background: url('../images/facebook.png') top left no-repeat; }
 
 .social-media-item:after {
     content: '|';

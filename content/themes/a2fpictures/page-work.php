@@ -11,20 +11,21 @@
  * @version 1.0
  */
 
-$video_post = new WP_Query(array(
-    'post_type'         => 'a2f_project',
-    'posts_per_page'    => -1,
-));
+$posts = get_field( 'work_posts' );
 
 get_header(); ?>
 
+<?php if ( $posts ) : ?>
 <div class="grid-col-12 home-container">
-    <?php if ( $video_post->have_posts() ) : while ( $video_post->have_posts() ) : $video_post->the_post(); ?>
+    
+    <?php foreach ( $posts as $post ) : setup_postdata( $post ); ?>
         <div <?php post_class('home-post grid-col-6 grid-col'); ?>>
             <a href="<?php the_permalink(); ?>">
+                
                 <div class="post-image">
                     <?php the_post_thumbnail('homepage-thumbnail'); ?>
                 </div>
+                
                 <div class="post-info">
                     <h3 class="post-title"><?php the_title(); ?></h3>
                     <div class="post-stakeholders">
@@ -32,9 +33,12 @@ get_header(); ?>
                         <span class="post-director"><?php the_field('director_name'); ?></span>
                     </div>
                 </div>
+                
             </a>
         </div>
-    <?php endwhile; endif; ?>
+    <?php endforeach; ?>
+    
 </div>
+<?php wp_reset_postdata(); endif; ?>
 
 <?php get_footer();

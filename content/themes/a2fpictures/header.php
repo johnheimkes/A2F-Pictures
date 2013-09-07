@@ -17,7 +17,7 @@
     <link rel="pingback" href="<?php bloginfo('pingback_url') ?>" />
 
     <!-- META DATA -->
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=960" />
     
     <!-- ICONS -->
     <link rel="shortcut icon" type="image/ico" href="<?php echo A2F_THEME_PATH_URL; ?>assets/images/favicon.ico" />

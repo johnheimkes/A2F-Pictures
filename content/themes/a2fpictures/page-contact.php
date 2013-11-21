@@ -42,7 +42,7 @@ get_header(); ?>
     <?php if ( get_field( 'midwest_office' ) ) : ?>
         <div class="grid-col-4 grid-col">
             <?php while ( has_sub_field( 'midwest_office' ) ) : ?>
-                <h3 class="heading-3">Midwest</h3>
+                <h3 class="heading-3">Executive Producer</h3>
                 <p class="office-phone italic"><?php the_sub_field( 'midwest_office_phone' ); ?></p>
                 <address>
                     <?php the_sub_field( 'midwest_office_address' ); ?>
@@ -57,7 +57,7 @@ get_header(); ?>
     <?php if ( get_field( 'east_coast_office' ) ) : ?>
         <div class="grid-col-4 grid-col">
             <?php while ( has_sub_field( 'east_coast_office' ) ) : ?>
-                <h3 class="heading-3">East Coast</h3>
+                <h3 class="heading-3">General Inquiries</h3>
                 <p class="office-phone italic"><?php the_sub_field( 'east_coast_office_phone' ); ?></p>
                 <p>
                     <a href="mailto:<?php the_sub_field( 'east_coast_office_email' ); ?>"><?php the_sub_field( 'east_coast_office_email' ); ?></a>
@@ -65,18 +65,5 @@ get_header(); ?>
             <?php endwhile; ?>
         </div>
     <?php endif; ?>
-    
-    <?php if ( get_field( 'west_coast_office' ) ) : ?>
-        <div class="grid-col-4 grid-col">
-            <?php while ( has_sub_field( 'west_coast_office' ) ) : ?>
-                <h3 class="heading-3">West Coast</h3>
-                <p class="office-phone italic"><?php the_sub_field( 'west_coast_office_phone' ); ?></p>
-                <p>
-                    <a href="mailto:<?php the_sub_field( 'west_coast_office_email' ); ?>"><?php the_sub_field( 'west_coast_office_email' ); ?></a>
-                </p>
-            <?php endwhile; ?>
-        </div>
-    <?php endif; ?>
-</div>
 
 <?php get_footer(); ?>

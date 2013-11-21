@@ -21,9 +21,6 @@ if ( ! isset( $content_width ) ) $content_width = 940;
 
 /**
  * Theme init class
- *
- * @package A2F_Theme
- * @author Jess Green <jgreen@a2f.com>
  */
 class A2F_Theme
 {

@@ -91,6 +91,7 @@ class A2F_Theme
         );
 
         wp_enqueue_script('a2f-global');
+        wp_enqueue_script('jquery-ui-core');
 
         // Comment reply script for threaded comments (registered in WP core)
         if (is_singular() && get_option('thread_comments')) {

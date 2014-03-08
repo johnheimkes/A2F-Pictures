@@ -23,7 +23,7 @@
                     <span class="mailto">
                         <a href="mailto:&#105;&#110;&#102;&#111;&#064;&#097;&#050;&#102;&#112;&#105;&#099;&#116;&#117;&#114;&#101;&#115;&#046;&#099;&#111;&#109;">info@a2fpictures.com</a>
                     </span>
-                    <span class="phone">612.547.9807</span>
+                    <span class="phone">612.345.7363</span>
                 </div>
                 
                 <ul class="social-media-list">

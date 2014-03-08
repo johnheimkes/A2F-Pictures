@@ -164,6 +164,9 @@ em {
     margin-bottom: 39px;
 }
 
+.fleft { float: left; }
+.fright { float: right;}
+
 /* ---------------------------------------------------------------------
 = Home
 ------------------------------------------------------------------------ */
@@ -274,6 +277,25 @@ em {
 
 .director-image img.inactive-bio:hover {
     opacity: 1;
+}
+
+.director-header { overflow: hidden; }
+
+.btn-request-reel {
+    display: block;
+    margin: 10px 0 0;
+    padding: 7px 10px;
+    background: #000000;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    font-size: 12px;
+    color: #ffffff;
+}
+
+.btn-request-reel:hover {
+    opacity: .8;
+    text-decoration: none;
 }
 
 /* ---------------------------------------------------------------------

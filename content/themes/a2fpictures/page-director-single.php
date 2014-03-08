@@ -24,7 +24,11 @@ get_header(); ?>
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
         <div class="grid-col-12">
             <div class="grid-col-6 grid-col">
-                <h2 class="title"><?php the_title(); ?></h2>
+                <div class="director-header">
+                    <h2 class="title fleft"><?php the_title(); ?></h2>
+                    <a href="mailto:elizabeth@a2fpictures.com?Subject=Reel%20Request:%20<?php the_title(); ?>" class="btn-request-reel fright">Request Reel</a>
+                </div>
+                
                 <h3 class="client-name oblique"><?php the_field('job_title'); ?></h3>
                 <?php echo get_the_author_meta('description'); ?>
             </div>

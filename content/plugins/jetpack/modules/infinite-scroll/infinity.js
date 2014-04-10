@@ -26,6 +26,7 @@ Scroller = function( settings ) {
 	this.disabled         = false;
 	this.page             = 1;
 	this.offset           = settings.offset;
+	this.currentday       = settings.currentday;
 	this.order            = settings.order;
 	this.throttle         = false;
 	this.handle           = '<div id="infinite-handle"><span>' + text.replace( '\\', '' ) + '</span></div>';
@@ -68,7 +69,7 @@ Scroller = function( settings ) {
 		this.body.bind( 'post-load', { self: self }, self.checkViewportOnLoad );
 	} else if ( type == 'click' ) {
 		this.element.append( self.handle );
-		this.element.on( 'click.infinity', '#infinite-handle', function() {
+		this.element.delegate( '#infinite-handle', 'click.infinity', function() {
 			// Handle the handle
 			$( '#infinite-handle' ).remove();
 			// Fire the refresh
@@ -79,13 +80,12 @@ Scroller = function( settings ) {
 
 /**
  * Check whether we should fetch any additional posts.
- *
- * By default, checks whether the bottom of the viewport is within one
- * viewport-height of the bottom of the content.
  */
 Scroller.prototype.check = function() {
 	var bottom = this.window.scrollTop() + this.window.height(),
-		threshold = this.element.offset().top + this.element.outerHeight() - this.window.height();
+		threshold = this.element.offset().top + this.element.outerHeight(false) - this.window.height();
+
+	threshold = Math.round( threshold * 0.75 );
 
 	return bottom > threshold;
 };
@@ -108,10 +108,13 @@ Scroller.prototype.render = function( response ) {
  */
 Scroller.prototype.query = function() {
 	return {
-		page:  this.page,
-		order: this.order,
-		scripts: window.infiniteScroll.settings.scripts,
-		styles: window.infiniteScroll.settings.styles
+		page           : this.page,
+		currentday     : this.currentday,
+		order          : this.order,
+		scripts        : window.infiniteScroll.settings.scripts,
+		styles         : window.infiniteScroll.settings.styles,
+		query_args     : window.infiniteScroll.settings.query_args,
+		last_post_date : window.infiniteScroll.settings.last_post_date,
 	};
 };
 
@@ -124,7 +127,7 @@ Scroller.prototype.gotop = function() {
 	blog.attr( 'title', totop );
 
 	// Scroll to top on blog title
-	blog.on( 'click', function( e ) {
+	blog.bind( 'click', function( e ) {
 		$( 'html, body' ).animate( { scrollTop: 0 }, 'fast' );
 		e.preventDefault();
 	});
@@ -140,7 +143,7 @@ Scroller.prototype.thefooter = function() {
 
 	// Check if we have an id for the page wrapper
 	if ( $.type( this.footer.wrap ) === "string" ) {
-		width = $( 'body #' + this.footer.wrap ).outerWidth();
+		width = $( 'body #' + this.footer.wrap ).outerWidth( false );
 
 		// Make the footer match the width of the page
 		if ( width > 479 )
@@ -197,7 +200,6 @@ Scroller.prototype.refresh = function() {
 
 	// Success handler
 	jqxhr.done( function( response ) {
-
 			// On success, let's hide the loader circle.
 			loader.hide();
 
@@ -274,12 +276,20 @@ Scroller.prototype.refresh = function() {
 				if ( stats )
 					new Image().src = document.location.protocol + '//stats.wordpress.com/g.gif?' + stats + '&post=0&baba=' + Math.random();
 
+				// Add new posts to the postflair object
+				if ( 'object' == typeof response.postflair && 'object' == typeof WPCOM_sharing_counts )
+					WPCOM_sharing_counts = $.extend( WPCOM_sharing_counts, response.postflair );
+
 				// Render the results
 				self.render.apply( self, arguments );
 
-				// If 'click' type, add back the handle
-				if ( type == 'click' )
+				// If 'click' type and there are still posts to fetch, add back the handle
+				if ( type == 'click' && !response.lastbatch )
 					self.element.append( self.handle );
+
+				// Update currentday to the latest value returned from the server
+				if (response.currentday)
+					self.currentday = response.currentday;
 
 				// Fire Google Analytics pageview
 				if ( self.google_analytics && 'object' == typeof _gaq )
@@ -308,7 +318,7 @@ Scroller.prototype.ensureFilledViewport = function() {
 		} );
 
 		if ( postsHeight === 0 ) {
-			self.body.off( 'post-load', self.checkViewportOnLoad );
+			self.body.unbind( 'post-load', self.checkViewportOnLoad );
 			return;
 		}
 	}
@@ -330,13 +340,13 @@ Scroller.prototype.ensureFilledViewport = function() {
 		self.refresh();
 	}
 	else {
-		self.body.off( 'post-load', self.checkViewportOnLoad );
+		self.body.unbind( 'post-load', self.checkViewportOnLoad );
 	}
 }
 
 /**
  * Event handler for ensureFilledViewport(), tied to the post-load trigger.
- * Necessary to ensure that the variable `this` contains the scroller when used in ensureFilledViewport(). Since this function is tied to an event, `this` becomes the DOM element related the event is tied to.
+ * Necessary to ensure that the variable `this` contains the scroller when used in ensureFilledViewport(). Since this function is tied to an event, `this` becomes the DOM element the event is tied to.
  */
 Scroller.prototype.checkViewportOnLoad = function( ev ) {
 	ev.data.self.ensureFilledViewport();
@@ -357,14 +367,14 @@ Scroller.prototype.determineURL = function () {
 	$( '.' + self.wrapperClass ).each( function() {
 		var id         = $( this ).attr( 'id' ),
 			setTop     = $( this ).offset().top,
-			setHeight  = $( this ).outerHeight(),
+			setHeight  = $( this ).outerHeight( false ),
 			setBottom  = 0,
 			setPageNum = $( this ).data( 'page-num' );
 
 		// Account for containers that have no height because their children are floated elements.
 		if ( 0 == setHeight ) {
 			$( '> *', this ).each( function() {
-				setHeight += $( this ).outerHeight();
+				setHeight += $( this ).outerHeight( false );
 			} );
 		}
 
@@ -430,7 +440,7 @@ Scroller.prototype.determineURL = function () {
 	// -1 indicates that the original requested URL should be used.
 	if ( 'number' == typeof pageNum ) {
 		if ( pageNum != -1 )
-			pageNum += ( 0 == self.offset ) ? 1 : self.offset;
+			pageNum++;
 
 		self.updateURL( pageNum );
 	}
@@ -438,11 +448,12 @@ Scroller.prototype.determineURL = function () {
 
 /**
  * Update address bar to reflect archive page URL for a given page number.
- * Checks if URL is different to prevent polution of browser history.
+ * Checks if URL is different to prevent pollution of browser history.
  */
 Scroller.prototype.updateURL = function( page ) {
 	var self = this,
-		pageSlug = -1 == page ? self.origURL : window.location.protocol + '//' + self.history.host + self.history.path.replace( /%d/, page );
+		offset = self.offset > 0 ? self.offset - 1 : 0,
+		pageSlug = -1 == page ? self.origURL : window.location.protocol + '//' + self.history.host + self.history.path.replace( /%d/, page + offset ) + self.history.parameters;
 
 	if ( window.location.href != pageSlug )
 		history.pushState( null, null, pageSlug );
@@ -453,7 +464,7 @@ Scroller.prototype.updateURL = function( page ) {
  */
 $( document ).ready( function() {
 	// Check for our variables
-	if ( ! infiniteScroll )
+	if ( 'object' != typeof infiniteScroll ) 
 		return;
 
 	// Set ajaxurl (for brevity)
@@ -469,17 +480,18 @@ $( document ).ready( function() {
 
 	// Initialize the scroller (with the ID of the element from the theme)
 	infiniteScroll.scroller = new Scroller( infiniteScroll.settings );
+
+	/**
+	 * Monitor user scroll activity to update URL to correspond to archive page for current set of IS posts
+	 * IE only supports pushState() in v10 and above, so don't bother if those conditions aren't met.
+	 */
+	if ( ! isIE || ( isIE && IEVersion >= 10 ) ) {
+		$( window ).bind( 'scroll', function() {
+			clearTimeout( timer );
+			timer = setTimeout( infiniteScroll.scroller.determineURL , 100 );
+		});
+	}
 });
 
-/**
- * Monitor user scroll activity to update URL to correspond to archive page for current set of IS posts
- * IE only supports pushState() in v10 and above, so don't bother if those conditions aren't met.
- */
-if ( ! isIE || ( isIE && IEVersion >= 10 ) ) {
-	$( window ).bind( 'scroll', function() {
-		clearTimeout( timer );
-		timer = setTimeout( infiniteScroll.scroller.determineURL , 100 );
-	});
-}
 
 })(jQuery); // Close closure

@@ -185,7 +185,7 @@ em {
     position: relative;
 }
 
-.home-post:nth-child(2n+3),
+.home-post:nth-child(3n+4),
 .related-post:nth-child(3n+4) {
     margin-left: 0;
 }

@@ -56,7 +56,7 @@ class A2F_Theme
         add_filter('wp_nav_menu_objects', array('A2F_Theme', 'home_menu_sandbox_fix') );
         
         // Add Image Sizes
-        add_image_size('homepage-thumbnail', 459, 258, true);
+        add_image_size('homepage-thumbnail', 299, 168, true);
         add_image_size('more-by-thumbnail', 146, 86, true);
     }
 

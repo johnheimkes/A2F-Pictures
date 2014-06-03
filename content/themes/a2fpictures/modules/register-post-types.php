@@ -25,7 +25,7 @@ function a2f_register_post_types()
             ),
             'public'        => true,
             'menu_position' => 5,
-            'menu_icon'     => A2F_THEME_PATH_URL . 'assets/images/films.png',
+            'menu_icon'     => 'dashicons-format-video',
             'supports' => array(
                 'title',
                 'editor',

@@ -19,7 +19,7 @@ get_header(); ?>
 <div class="grid-col-12 home-container">
     
     <?php foreach ( $posts as $post ) : setup_postdata( $post ); ?>
-        <div <?php post_class('home-post grid-col-6 grid-col'); ?>>
+        <div <?php post_class('home-post grid-col-4 grid-col'); ?>>
             <a href="<?php the_permalink(); ?>">
                 
                 <div class="post-image">

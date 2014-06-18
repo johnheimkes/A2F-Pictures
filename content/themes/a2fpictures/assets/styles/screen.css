@@ -121,6 +121,7 @@ a:hover {
 }
 
 .current-menu-item > a,
+.current-page-ancestor > a,
 .menu-item > a:hover {
     border-bottom: 2px solid #ffffff;
     text-decoration: none;
@@ -243,8 +244,37 @@ em {
 }
 
 /* ---------------------------------------------------------------------
+= Sidebar
+------------------------------------------------------------------------ */
+.sidebar > ul {
+    line-height: 2.5;
+}
+.sidebar > ul > li > a {
+    font: normal 30px 'league_gothicregular';
+    color: #777;
+}
+
+.sidebar > ul > li.current_page_item > a {
+    color: #000;
+}
+
+.sidebar > ul > li > a:hover {
+    color: #000;
+    text-decoration: none;
+    transition: all .3s ease;
+}
+/* ---------------------------------------------------------------------
 = Single Project Page and Directors
 ------------------------------------------------------------------------ */
+.module-header {
+    overflow: hidden;
+    margin: 40px 0 5px;
+}
+
+.related-module {
+    margin-left: 0 !important;
+}
+
 .related-posts {
     overflow: hidden;
 }
@@ -266,26 +296,6 @@ em {
 .client-name {
     font-size: 18px;
     padding-bottom: 5px;
-}
-
-.director-image img {
-    filter: url(filters.svg#grayscale); /* Firefox 3.5+ */
-    filter: gray; /* IE6-9 */
-    -webkit-filter: grayscale(1); /* Google Chrome & Safari 6+ */
-}
-
-.director-image img:hover,
-.director-image img.active-bio {
-    filter: none;
-    -webkit-filter: grayscale(0);
-}
-
-.director-image img.inactive-bio {
-    opacity: .5;
-}
-
-.director-image img.inactive-bio:hover {
-    opacity: 1;
 }
 
 .director-header { overflow: hidden; }

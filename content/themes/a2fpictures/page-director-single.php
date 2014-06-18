@@ -36,7 +36,7 @@ get_header(); ?>
             </div>
         
             <?php if ( get_the_author_meta('display_name') == 'Mark Mazur') { ?>
-                <div class="related-module grid-col-8 grid-col">
+                <div class="related-module grid-col-8 grid-col fright">
                     <div class="module-header">
                         <h3 class="title fleft">Projects Directed By <?php the_author(); ?></h3>
                         <a href="mailto:elizabeth@a2fpictures.com?Subject=Reel%20Request:%20<?php the_title(); ?>" class="btn-request-reel fright">Request Reel</a>
@@ -66,7 +66,7 @@ get_header(); ?>
             <?php } ?>
         
             <?php if ( get_the_author_meta('display_name') == 'James Rautmann') { ?>
-                <div class="related-module grid-col-8 grid-col">
+                <div class="related-module grid-col-8 grid-col fright">
                     <div class="module-header">
                         <h3 class="title fleft">Projects Directed By <?php the_author(); ?></h3>
                         <a href="mailto:elizabeth@a2fpictures.com?Subject=Reel%20Request:%20<?php the_title(); ?>" class="btn-request-reel fright">Request Reel</a>
@@ -96,7 +96,7 @@ get_header(); ?>
             <?php } ?>
         
             <?php if ( get_the_author_meta('display_name') == 'Trent Hilborn') { ?>
-                <div class="related-module grid-col-8 grid-col">
+                <div class="related-module grid-col-8 grid-col fright">
                     <div class="module-header">
                         <h3 class="title fleft">Projects Directed By <?php the_author(); ?></h3>
                         <a href="mailto:elizabeth@a2fpictures.com?Subject=Reel%20Request:%20<?php the_title(); ?>" class="btn-request-reel fright">Request Reel</a>

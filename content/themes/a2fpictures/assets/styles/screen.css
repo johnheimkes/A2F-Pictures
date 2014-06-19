@@ -136,6 +136,10 @@ a:hover {
     display: block;
 }
 
+.page-template-page-director-single-php .related-post:hover .post-info {
+    display: table;
+}
+
 .content {
     margin-bottom: 50px;
 }
@@ -197,7 +201,13 @@ em {
     color: #ffffff;
     opacity: .75;
     position: absolute;
-    bottom: 6px;
+    bottom: 0;
+}
+
+.page-template-page-director-single-php .related-post:hover .post-info {
+    height: 64px;
+    text-align: center;
+    top: 0;
 }
 
 .home-post .post-title {
@@ -268,15 +278,16 @@ em {
 ------------------------------------------------------------------------ */
 .module-header {
     overflow: hidden;
-    margin: 40px 0 5px;
-}
-
-.related-module {
-    margin-left: 0 !important;
 }
 
 .related-posts {
     overflow: hidden;
+}
+
+.related-posts img {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 .related-post a {
@@ -291,6 +302,8 @@ em {
 .related-post-title {
     font-size: 12px;
     padding: 2px 5px;
+    display: table-cell;
+    vertical-align: middle;
 }
 
 .client-name {
@@ -315,6 +328,18 @@ em {
 .btn-request-reel:hover {
     opacity: .8;
     text-decoration: none;
+}
+
+.page-template-page-director-single-php .btn-request-reel {
+    margin: 8px 10px 0 0;
+}
+
+.director-info {
+    margin-top: 25px;
+}
+
+.page-template-page-director-single-php .module-header .title {
+    font-size: 32px;
 }
 
 /* ---------------------------------------------------------------------

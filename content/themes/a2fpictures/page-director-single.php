@@ -124,8 +124,8 @@ get_header(); ?>
                 </div>
             <?php } ?>
             
-            <?php if ( get_the_author_meta('display_name') == 'Mike Nelson') { ?>
-                <div class="related-module grid-col-8 grid-col">
+            <?php if ( get_the_author_meta('display_name') == 'Mike P. Nelson') { ?>
+                <div class="related-module grid-col-6 grid-col">
                     <div class="module-header">
                         <h3 class="title fleft">Projects Directed By <?php the_author(); ?></h3>
                     </div>

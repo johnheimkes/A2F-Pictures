@@ -131,7 +131,7 @@ get_header(); ?>
                     </div>
                 
                     <?php
-                        $posts = get_field('more_projects_by_trent', 'option');
+                        $posts = get_field('more_projects_by_mike', 'option');
             
                         if ( $posts ) :
                     ?>

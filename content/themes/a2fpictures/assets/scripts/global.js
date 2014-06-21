@@ -16,7 +16,7 @@ jQuery(document).ready(function($) {
         ];
 
         var mapOptions = {
-            zoom: 15,
+            zoom: 14,
             center: office,
             mapTypeControlOptions: {
                 mapTypeIds: [google.maps.MapTypeId.ROADMAP, MY_MAPTYPE_ID]

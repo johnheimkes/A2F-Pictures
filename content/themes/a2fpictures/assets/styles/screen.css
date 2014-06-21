@@ -121,6 +121,7 @@ a:hover {
 }
 
 .current-menu-item > a,
+.current-page-ancestor > a,
 .menu-item > a:hover {
     border-bottom: 2px solid #ffffff;
     text-decoration: none;
@@ -133,6 +134,10 @@ a:hover {
 .home-post:hover .post-info,
 .related-post:hover .post-info {
     display: block;
+}
+
+.page-template-page-director-single-php .related-post:hover .post-info {
+    display: table;
 }
 
 .content {
@@ -196,7 +201,13 @@ em {
     color: #ffffff;
     opacity: .75;
     position: absolute;
-    bottom: 6px;
+    bottom: 0;
+}
+
+.page-template-page-director-single-php .related-post:hover .post-info {
+    height: 64px;
+    text-align: center;
+    top: 0;
 }
 
 .home-post .post-title {
@@ -243,10 +254,40 @@ em {
 }
 
 /* ---------------------------------------------------------------------
+= Sidebar
+------------------------------------------------------------------------ */
+.sidebar > ul {
+    line-height: 2.5;
+}
+.sidebar > ul > li > a {
+    font: normal 30px 'league_gothicregular';
+    color: #777;
+}
+
+.sidebar > ul > li.current_page_item > a {
+    color: #000;
+}
+
+.sidebar > ul > li > a:hover {
+    color: #000;
+    text-decoration: none;
+    transition: all .3s ease;
+}
+/* ---------------------------------------------------------------------
 = Single Project Page and Directors
 ------------------------------------------------------------------------ */
+.module-header {
+    overflow: hidden;
+}
+
 .related-posts {
     overflow: hidden;
+}
+
+.related-posts img {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 .related-post a {
@@ -261,31 +302,13 @@ em {
 .related-post-title {
     font-size: 12px;
     padding: 2px 5px;
+    display: table-cell;
+    vertical-align: middle;
 }
 
 .client-name {
     font-size: 18px;
     padding-bottom: 5px;
-}
-
-.director-image img {
-    filter: url(filters.svg#grayscale); /* Firefox 3.5+ */
-    filter: gray; /* IE6-9 */
-    -webkit-filter: grayscale(1); /* Google Chrome & Safari 6+ */
-}
-
-.director-image img:hover,
-.director-image img.active-bio {
-    filter: none;
-    -webkit-filter: grayscale(0);
-}
-
-.director-image img.inactive-bio {
-    opacity: .5;
-}
-
-.director-image img.inactive-bio:hover {
-    opacity: 1;
 }
 
 .director-header { overflow: hidden; }
@@ -305,6 +328,22 @@ em {
 .btn-request-reel:hover {
     opacity: .8;
     text-decoration: none;
+}
+
+.page-template-page-director-single-php .btn-request-reel {
+    margin: 8px 10px 0 0;
+}
+
+.director-info {
+    margin-top: 25px;
+}
+
+.page-template-page-director-single-php .module-header .title {
+    font-size: 32px;
+}
+
+.page-template-page-director-single-php .related-post {
+    margin-bottom: 8px;
 }
 
 /* ---------------------------------------------------------------------

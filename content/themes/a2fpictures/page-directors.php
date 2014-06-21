@@ -11,10 +11,8 @@
  * @version 1.0
  */
 
-get_header(); ?>
+get_header();
 
-<h2 class="title">Who We Are</h2>
+get_sidebar();
 
-<?php get_template_part( 'views/bio', 'pics' ); ?>
-
-<?php get_footer(); ?>
+get_footer(); ?>

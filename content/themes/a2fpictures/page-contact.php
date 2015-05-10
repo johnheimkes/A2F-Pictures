@@ -28,7 +28,7 @@ get_header(); ?>
     <div id="map-canvas"></div>
 </div>
 
-<div class="grid-col-12 office-contact">
+<div class="grid-col-12 office-contact wysiwyg">
     
     <?php if ( get_field( 'left_column' ) ) : ?>
         <div class="grid-col-4 grid-col">

@@ -30,28 +30,34 @@ get_header(); ?>
 
 <div class="grid-col-12 office-contact">
     
-    <?php if ( get_field( 'midwest_office' ) ) : ?>
+    <?php if ( get_field( 'left_column' ) ) : ?>
         <div class="grid-col-4 grid-col">
-            <?php while ( has_sub_field( 'midwest_office' ) ) : ?>
-                <h3 class="heading-3">Executive Producer</h3>
-                <p class="office-phone italic"><?php the_sub_field( 'midwest_office_phone' ); ?></p>
-                <address>
-                    <?php the_sub_field( 'midwest_office_address' ); ?>
-                </address>
+            <?php while ( has_sub_field( 'left_column' ) ) : ?>
+                <?php the_sub_field( 'content' ); ?>
                 <p>
-                    <a href="mailto:<?php the_sub_field( 'midwest_office_email' ); ?>"><?php the_sub_field( 'midwest_office_email' ); ?></a>
+                    <a href="mailto:<?php the_sub_field( 'email_address' ); ?>"><?php the_sub_field( 'email_address' ); ?></a>
                 </p>
             <?php endwhile; ?>
         </div>
     <?php endif; ?>
     
-    <?php if ( get_field( 'east_coast_office' ) ) : ?>
+    <?php if ( get_field( 'middle_column' ) ) : ?>
         <div class="grid-col-4 grid-col">
-            <?php while ( has_sub_field( 'east_coast_office' ) ) : ?>
-                <h3 class="heading-3">General Inquiries</h3>
-                <p class="office-phone italic"><?php the_sub_field( 'east_coast_office_phone' ); ?></p>
+            <?php while ( has_sub_field( 'middle_column' ) ) : ?>
+                <?php the_sub_field( 'content' ); ?>
                 <p>
-                    <a href="mailto:<?php the_sub_field( 'east_coast_office_email' ); ?>"><?php the_sub_field( 'east_coast_office_email' ); ?></a>
+                    <a href="mailto:<?php the_sub_field( 'email_address' ); ?>"><?php the_sub_field( 'email_address' ); ?></a>
+                </p>
+            <?php endwhile; ?>
+        </div>
+    <?php endif; ?>
+    
+    <?php if ( get_field( 'right_column' ) ) : ?>
+        <div class="grid-col-4 grid-col">
+            <?php while ( has_sub_field( 'right_column' ) ) : ?>
+                <?php the_sub_field( 'content' ); ?>
+                <p>
+                    <a href="mailto:<?php the_sub_field( 'email_address' ); ?>"><?php the_sub_field( 'email_address' ); ?></a>
                 </p>
             <?php endwhile; ?>
         </div>

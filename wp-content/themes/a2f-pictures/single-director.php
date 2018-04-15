@@ -109,7 +109,6 @@ get_header(); ?>
 			<div class="movie-controller">
 
 				<?php
-					$director_projects = get_field('featured_projects');
 					if( $director_projects ):
 
 				?>

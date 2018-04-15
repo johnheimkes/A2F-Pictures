@@ -544,6 +544,25 @@ button:active {
 
 /************************ CONTACT PAGE 							***********************/
 
+/************************ STANDARD PAGE 						***********************/
+section.content {
+    color: #fff;
+}
+
+section.content a {
+    text-decoration: underline;
+}
+
+section.content ul {
+    padding-left: 20px;
+    list-style: disc;
+}
+
+section.content ol {
+    padding-left: 20px;
+    list-style: decimal;
+}
+
 /************************ SEO PAGES 							***********************/
 
 /************************ FOOTER SECTION  						***********************/

@@ -38,7 +38,7 @@
 		</div>
 	</header><!-- #masthead -->
 	<div class="header-sub-nav">
-		<div class="wrap">
+		<div class="wrap d-nav">
 			<?php wp_nav_menu( array( 'manu' => 'Directors Nav', 'container_class' => 'director-nav' ) ); ?>
 		</div>
 	</div>

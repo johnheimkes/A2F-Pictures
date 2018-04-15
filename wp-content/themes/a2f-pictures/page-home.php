@@ -92,8 +92,6 @@ get_header(); ?>
 				<div class="movie-controller">
 
 					<?php
-					$home_projects = get_field( 'home_page_projects' , 'option' );
-
 					if( $home_projects ): ?>
 
 						<?php foreach( $home_projects as $home_project ): ?>

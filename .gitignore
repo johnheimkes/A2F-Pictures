@@ -4,3 +4,4 @@ wp-config.php
 .htaccess
 .ftpquota
 error_log
+wp-content/uploads

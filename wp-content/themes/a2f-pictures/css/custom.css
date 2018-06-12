@@ -188,24 +188,27 @@ section {
     font-weight:300;
 }
 .main-navigation li a:focus,
-.main-navigation li a:visited,
 .main-navigation li a.active{
     color: #fff;
 }
-.header-sub-nav{
+.header-sub-nav, .header-sub-nav-2{
     padding:15px 20px;
     background-color: rgba(255,255,255,0.05);
     text-align: right;
     z-index: 2;
     display: none;
+    
 }
-.header-sub-nav p {
+.header-sub-nav.open, .header-sub-nav-2.open{
+    display: block;
+}
+.header-sub-nav p,.header-sub-nav-2 p {
     display: inline-block;
     margin:0 0 0 20px;
     text-transform: uppercase;
     color:#666;
 }
-.header-sub-nav p:hover {
+.header-sub-nav p:hover, .header-sub-nav-2 p:hover {
     color: #fff;
 }
 
@@ -225,6 +228,23 @@ section {
 .director-nav ul li.current-menu-item a {
     color: #fff;
 }
+
+.cat-nav ul {
+}
+.cat-nav ul li {
+    display: inline-block;
+    margin:0 0 0 20px;
+}
+.cat-nav ul li a {
+    text-transform: uppercase;
+    color:#666;
+}
+.cat-nav ul li a:hover {
+    color: #fff;
+}
+.cat-nav ul li.current-menu-item a {
+    color: #fff;
+}
 /************************ HOME PAGE 							***********************/
 
 .main-movie-wrapper.slick-slider {
@@ -238,8 +258,6 @@ section {
     overflow: hidden;
     max-width: 100%;
     text-align: center;
-
-
 }
 .embed-container iframe,
 .embed-container object,
@@ -356,7 +374,7 @@ section.home-slider .wrap {
 }
 .controller-single {
     width: 20%;
-    height:200px;
+    height:150px;
     background-color: #000;
     border:1px solid #222;
     margin:0 10px;
@@ -483,7 +501,7 @@ button:active {
 /************************ BLOG / SINGLE / ARCHIVE / SEARCH   	***********************/
 
 .director-bio-wrap {
-    background-color: rgba(255,255,255,0.05);
+    //background-color: rgba(255,255,255,0.05);
     margin:0;
     padding:50px 20px;
     text-align: center;
@@ -542,6 +560,15 @@ button:active {
     color: #666;
 }
 
+h3.cat {
+    color: #fff;
+    font-size: 30px;
+    font-size: 3.0rem;
+    text-transform: uppercase;
+}
+.has-children a {
+    color: #fff!important;
+}
 /************************ CONTACT PAGE 							***********************/
 
 /************************ STANDARD PAGE 						***********************/
@@ -716,6 +743,10 @@ pre {
 }
 /* -------------------------------- Landscape Mobile ----------------------------------- */
 @media only screen and (max-width: 768px){
+    .movie-single:hover .movie-play-button{
+        font-size: 30px;
+    }
+
     .footer-col.first {
         width:100%;
     }
@@ -729,7 +760,7 @@ pre {
         max-height: 57px;
     }
     .controller-single {
-        height: 120px;
+        height: 90px;
     }
     .director-bio-wrap {
         padding: 40px 20px;
@@ -770,6 +801,10 @@ pre {
     .main-navigation ul {
         display: block;
     }
+    .main-navigation li a {
+        font-size: 20px;
+        font-size: 2.0rem;
+    }
 
     .movie-single-info h4{
         font-size: 45px;
@@ -784,10 +819,10 @@ pre {
         display: block;
         margin: 0 0 20px;
     }
-    .director-nav ul li {
+    .director-nav ul li, .cat-nav ul li {
         display: block;
     }
-    .director-nav ul li {
+    .director-nav ul li, .cat-nav ul li {
         display: block;
         margin: 0;
         padding: 5px 0;
@@ -802,7 +837,11 @@ pre {
         line-height: 50px;
     }
 
-
+    h3.cat {
+        color: #fff;
+        font-size: 35px;
+        font-size: 3.5rem;
+    }
 
 }
 /* -------------------------------- iphone 3/4 Landscape ----------------------------- */
@@ -831,10 +870,35 @@ pre {
     .controller-single {
         height: 75px;
     }
+    .movie-single:hover .movie-play-button{
+        font-size: 24px;
+    }
+    .movie-single-info h4{
+        font-size: 30px;
+        font-size:3.0rem;
+
+    }
+    .movie-single-info p {
+        font-size: 18px;
+        font-size: 1.8rem;
+    }
+
+    .main-navigation li a {
+        font-size: 18px;
+        font-size: 1.8rem;
+    }
+    h3.cat {
+        color: #fff;
+        font-size: 30px;
+        font-size: 3.0rem;
+    }
 
 }
 
 /* -------------------------------- Portrait Mobile ----------------------------- */
 @media only screen and (max-width: 320px){
-
+    .main-navigation li a {
+        font-size: 17px;
+        font-size: 1.7rem;
+    }
 }

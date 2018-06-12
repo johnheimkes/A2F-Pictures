@@ -27,7 +27,7 @@ jQuery(document).ready( function() {
         asNavFor: '.movie-controller',
     });
     jQuery('.movie-controller').slick({
-        slidesToShow: 5,
+        slidesToShow: 4,
         slidesToScroll: 3,
         asNavFor: '.main-movie-wrapper',
         dots: false,
@@ -59,7 +59,7 @@ jQuery(document).ready( function() {
             {
                 breakpoint: 600,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 3,
                 }
             },
             {
@@ -100,11 +100,21 @@ jQuery(document).ready( function() {
 
     });
 
-    
+    // Directors Menu
     jQuery('#menu-item-14 a').click(function(e){
         e.preventDefault();
         jQuery(this).toggleClass('active');
-        jQuery('.header-sub-nav').slideToggle();
+        jQuery('.header-sub-nav-2').removeClass('open');
+        jQuery('.header-sub-nav').toggleClass('open');
+        jQuery('#menu-item-606').removeClass('has-children');
+    });
+
+    // Content Menu
+    jQuery('#menu-item-606 a').click(function(e){
+        e.preventDefault();
+        jQuery('.header-sub-nav').removeClass('open');
+        jQuery('.header-sub-nav-2').toggleClass('open');
+        jQuery('#menu-item-14').removeClass('has-children');
     });
 
     jQuery('.view-bio-button').click(function(e){
@@ -112,6 +122,22 @@ jQuery(document).ready( function() {
         jQuery(this).toggleClass('active');
         jQuery('.single-bio').slideToggle();
     });
+
+    // Open Secondary Nav
+    if ( jQuery('li.current-menu-item') ) {
+        jQuery('li.current-menu-item').closest('.subnav-wraps').addClass('open');
+    };
+
+
+    if ( jQuery('.header-sub-nav').hasClass('open') ) {
+        jQuery('#menu-item-14').addClass('has-children');
+    };
+
+    if ( jQuery('.header-sub-nav-2').hasClass('open') ) {
+        jQuery('#menu-item-606').addClass('has-children');
+    };
+
+
 
 
     /**

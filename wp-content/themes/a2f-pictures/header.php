@@ -34,13 +34,18 @@
 
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-			</nav><!-- #site-navigation -->
+            </nav><!-- #site-navigation -->
 		</div>
 	</header><!-- #masthead -->
-	<div class="header-sub-nav">
+	<div class="header-sub-nav subnav-wraps">
 		<div class="wrap d-nav">
-			<?php wp_nav_menu( array( 'manu' => 'Directors Nav', 'container_class' => 'director-nav' ) ); ?>
+			<?php wp_nav_menu( array( 'menu' => 'Directors Nav', 'container_class' => 'director-nav' ) ); ?>
 		</div>
 	</div>
+    <div class="header-sub-nav-2 subnav-wraps">
+        <div class="wrap c-nav">
+			<?php wp_nav_menu( array( 'menu' => 'Cat Nav', 'container_class' => 'cat-nav' ) ); ?>
+        </div>
+    </div>
 
 	<div id="content" class="site-content">
